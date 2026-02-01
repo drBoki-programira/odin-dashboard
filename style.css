@@ -1,0 +1,165 @@
+:root {
+    --prim-clr: rgb(33, 161, 247);
+    --sec-clr: white;
+    --bg-clr: rgb(212, 231, 243);
+    --greyish: rgb(184, 181, 181); 
+    background-color: rgb(27, 27, 27);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    container-type: border-box;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 4fr;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.header {
+    padding: 1rem 3rem;
+    background-color: var(--sec-clr);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    align-items: center;
+}
+
+form > button {
+    border: none;
+    background-color: var(--sec-clr);
+    margin-right: 1rem;
+    font-size: 1.5rem;
+}
+
+input[type="search"] {
+    border: none;
+    border-radius: 1rem;
+    background-color: var(--bg-clr);
+    width: 80%;
+    font-size: 1.5rem;
+}
+
+.account-info {
+    display: flex;
+    justify-content: right;
+    gap: 1.5rem;
+}
+
+.account-greet {
+    display: grid;
+    grid-template-columns: 7rem 1fr;
+    align-items: center;
+}
+
+.account-greet .account-icon {
+    grid-row: span 2;
+}
+
+.account-greet .greet {
+    font-size: 0.8rem;
+}
+
+.account-greet .account-name {
+    font-size: 1.5rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.buttons button {
+    border: none;
+    border-radius: 2rem;
+    background-color: var(--prim-clr);
+    color: var(--sec-clr);
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    width: 5rem;
+}
+
+.sidebar {
+    grid-row: 1 / 3;
+    background-color: var(--prim-clr);
+    color: var(--sec-clr);
+    padding: 1rem;
+}
+
+.sb-title {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.7rem;
+    margin-bottom: 3rem;
+}
+
+.sb-options {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.3rem;
+    margin: 1rem 0;
+    padding: 0 0.5rem;
+}
+
+#options-gap {
+    margin-bottom: 2rem;
+}
+
+.main {
+    background-color: var(--bg-clr);
+    padding: 2rem 1rem;
+    box-shadow: inset 0px 3px 5px var(--greyish);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1rem 1fr 1rem 1fr;
+    gap: 1rem;
+}
+
+.cards {
+    grid-row: span 3;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card,
+.announcements,
+.trending {
+    background-color: var(--sec-clr);
+    border-radius: 1rem;
+    box-shadow: 1px 1px 3px var(--greyish);
+    padding: 1rem;
+}
+
+.card {
+    display: grid;
+    grid-template-rows: 1rem 1fr 1rem;
+    border-left: orange 10px solid;
+}
+
+.svgs {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.announcements {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.trending {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: repeat(1fr, 4);
+    align-items: center;
+}
