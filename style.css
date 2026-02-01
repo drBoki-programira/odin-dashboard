@@ -4,6 +4,7 @@
     --bg-clr: rgb(212, 231, 243);
     --greyish: rgb(184, 181, 181); 
     background-color: rgb(27, 27, 27);
+    font-family: "Roboto";
 }
 
 * {
@@ -93,15 +94,33 @@ input[type="search"] {
     padding: 1rem;
 }
 
+.sidebar button {
+    border: none;
+    background-color: var(--prim-clr);
+    color: var(--sec-clr);
+    font-weight: 600;
+}
+
+.sidebar button:hover {
+    color: var(--greyish);
+}
+
 .sb-title {
     display: flex;
+    align-items: center;
     gap: 1rem;
     font-size: 1.7rem;
     margin-bottom: 3rem;
 }
 
+.sb-title svg {
+    height: 1.7rem;
+    fill: var(--sec-clr);
+}
+
 .sb-options {
     display: flex;
+    align-items: center;
     gap: 1rem;
     font-size: 1.3rem;
     margin: 1rem 0;
@@ -109,7 +128,12 @@ input[type="search"] {
 }
 
 #options-gap {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+}
+
+.sb-options svg {
+    height: 1.3rem;
+    fill: var(--sec-clr);
 }
 
 .main {
