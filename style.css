@@ -2,7 +2,7 @@
     --prim-clr: rgb(33, 161, 247);
     --sec-clr: white;
     --bg-clr: rgb(212, 231, 243);
-    --greyish: rgb(184, 181, 181); 
+    --greyish: rgb(129, 127, 127); 
     background-color: rgb(27, 27, 27);
     font-family: "Roboto";
 }
@@ -105,6 +105,10 @@ input[type="search"] {
     color: var(--greyish);
 }
 
+.sidebar button:hover svg {
+    fill: var(--greyish);
+}
+
 .sb-title {
     display: flex;
     align-items: center;
@@ -141,9 +145,19 @@ input[type="search"] {
     padding: 2rem 1rem;
     box-shadow: inset 0px 3px 5px var(--greyish);
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
     grid-template-rows: 1rem 1fr 1rem 1fr;
     gap: 1rem;
+}
+
+.main .title {
+    font-weight: 500;
+}
+
+.main p {
+    color: var(--greyish);
+    font-size: 0.8rem;
+    padding: 0.4rem 0;
 }
 
 .cards {
@@ -166,19 +180,48 @@ input[type="search"] {
     display: grid;
     grid-template-rows: 1rem 1fr 1rem;
     border-left: orange 10px solid;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 
 .svgs {
     display: flex;
     justify-content: right;
     align-items: center;
-    gap: 0.8rem;
+    gap: 1.3rem;
+}
+
+.svgs button {
+    border: none;
+    background-color: var(--sec-clr);
+    border-radius: 50%;
+    padding: 2px;
+}
+
+.svgs button:active {
+    background-color: var(--greyish);
+}
+
+.svgs button:active svg {
+    fill: var(--sec-clr)
+}
+
+.svgs svg {
+    height: 1.3rem;
+    fill: black;
 }
 
 .announcements {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    padding: 2rem;
+    font-size: 0.8rem;
+}
+
+.announcements p {
+    font-size: 0.7rem;
+    padding: 0.2rem 0;
 }
 
 .trending {
@@ -186,4 +229,10 @@ input[type="search"] {
     grid-template-columns: 50px 1fr;
     grid-template-rows: repeat(1fr, 4);
     align-items: center;
+    font-size: 0.8rem;
+    padding: 2rem 1rem;
+}
+
+img {
+    height: 2rem;
 }
